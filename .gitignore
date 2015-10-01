@@ -1,0 +1,15 @@
+*.class
+*.orig
+.settings*
+.project
+.classpath
+*.pyc
+*.tgz
+*.jar
+*.war
+*.ear
+.DS_Store*
+*~
+*.db
+*-out
+
