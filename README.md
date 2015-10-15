@@ -57,10 +57,12 @@ The file `synth_procedure.py` begins with some configuration settings, specifica
 4. The location of ott.
 5. The ottid of the root node of the clade of interest.
 
-Set these, er, settings, and run. Since things can take a while (and most things are 
-logged), it might be best to run this under screen:
+Set these, er, settings, and run. Since things can take a while, it might be best to run 
+this under screen:
 
     screen
     python synth_procedure.py
 
 And that is it. 
+
+**TODO:** Write logs for important/verbose steps (load, synth, etc.)
