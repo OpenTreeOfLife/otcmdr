@@ -6,7 +6,7 @@ put here for the time being in case it might be of use.
 ### What You Need
 To carry this out, you will need the following:
 
-**this repo** Duh. Specifically, get branch `python_synthesis`. Get with:
+**this repo** Duh. Specifically, get branch `python_synthesis_pipeline`. Get with:
 
     git clone git@github.com:OpenTreeOfLife/otcmdr.git
     cd otcmdr
