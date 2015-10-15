@@ -194,6 +194,9 @@ def run_decomposition(basedir, otceteraloc, subprobs):
     print "\nMoving to otcetera dir: " + otceteraloc
     os.chdir(otceteraloc)
     cmd = ["make", "-f", "Makefile.synth-v3"]
+    if os.path.exists(otceteraloc + "step_7_scratch/export-sub-temp"):
+        print "Deleting directory " + otceteraloc + "step_7_scratch/export-sub-temp"
+        rmtree(otceteraloc + "step_7_scratch/export-sub-temp")
     pr = Popen(cmd).wait()
     if os.path.exists(subprobs):
         print "Removing existing directory " + subprobs
