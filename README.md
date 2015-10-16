@@ -6,18 +6,17 @@ put here for the time being in case it might be of use.
 ### What You Need
 To carry this out, you will need the following:
 
-**this repo** Duh. Specifically, get branch `python_synthesis_pipeline`. Get with:
+**this repo** Really, just the scripts `synth_procedure.py` and `general_utils.py`. 
+To do this, get the branch `python_synthesis_pipeline`:
 
     git clone git@github.com:OpenTreeOfLife/otcmdr.git
     cd otcmdr
     git checkout python_synthesis
 
-**treemachine** Found [here](https://github.com/OpenTreeOfLife/treemachine). Specifically, 
-you will need the branch `python_synthesis_pipeline`. This'll do ya:
+**treemachine** Found [here](https://github.com/OpenTreeOfLife/treemachine). This'll do ya:
 
     git clone git@github.com:OpenTreeOfLife/treemachine.git
     cd treemachine
-    git checkout python_synthesis_pipeline
     ./mvn_cmdline.sh
 
 **otcetera** Found [here](https://github.com/OpenTreeOfLife/otcetera). The `otcetera` README 

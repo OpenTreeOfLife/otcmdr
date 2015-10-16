@@ -3,8 +3,6 @@ from subprocess import Popen
 
 import general_utils
 
-## NOTE: assumes branch 'python_synthesis_pipeline' of treemachine at the moment
-
 ################ config #####################
 javapre = "java -XX:+UseConcMarkSweepGC -Xmx32g -server -jar"
 treemloc = "/home/josephwb/Work/OToL/treemachine/target/treemachine-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
