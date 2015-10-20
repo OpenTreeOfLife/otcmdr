@@ -13,9 +13,9 @@ basedir = "/home/josephwb/Desktop/python_synth/Hypocreales/"
 # what is the ott id of the root node of the clade of interest?
 synthottid = "728371"
 # name of DB
-dbname = basedir + "Life_ottv2.9draft12.db"
+dbname = basedir + "Hypocreales_ottv2.9draft12.db"
 # name of synth tree newick file
-synthtree = basedir + "Life_ottv2.9draft12_synth.tre"
+synthtree = basedir + "Hypocreales_ottv2.9draft12_synth.tre"
 # where are ranked study lists located? assume here to use dir Study_lists in this repo
 listdir = "Study_lists"
 sys.path.insert(0, listdir)
