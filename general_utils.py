@@ -25,6 +25,29 @@ def get_all_studies_opentreeapi(studytreelist, studyloc):
         get_study_opentreeapi(studyid, studyloc)
 
 
+def prepare_for_decomposition(javapre, treemloc, basedir, dbname, otloc, synthottid, subsettax, subsettaxtree,
+    studytreelist, studyloc, trloc):
+    subset_taxonomy(synthottid, otloc, subsettax)
+    get_taxonomy_newick(treemloc, javapre, subsettax, subsettaxtree)
+    init_taxonomy_db(treemloc, javapre, dbname, subsettax, otloc, basedir)
+    process_nexsons(studytreelist, studyloc, javapre, treemloc, dbname, trloc)
+
+
+def perform_decomposition(basedir, studytreelist, trloc, otceteraloc, subsettaxtree, subprobs):
+    ranklist = basedir + "tree-ranking.txt"
+    generate_tree_ranking(studytreelist, trloc, ranklist)
+    set_symlinks(otceteraloc, ranklist, trloc, subsettaxtree, basedir)
+    run_decomposition(basedir, otceteraloc, subprobs)
+
+
+def run_synthesis(javapre, treemloc, basedir, dbname, synthottid, subprobs, synthtree):
+    processedsubprobs = basedir + "Processed_subprobs"
+    format_subprobs(treemloc, javapre, subprobs, processedsubprobs)
+    load_subprobs(treemloc, javapre, dbname, processedsubprobs, basedir)
+    run_synth(treemloc, javapre, dbname, processedsubprobs, synthottid, basedir)
+    extract_tree(treemloc, javapre, dbname, synthottid, basedir, synthtree)
+
+
 # prune unmapped and duplicated taxa
 def process_nexsons(studytreelist, studyloc, javapre, treemloc, graphdb, outd):
     if not os.path.exists(outd):
@@ -77,7 +100,7 @@ def subset_taxonomy(target, otloc, outtax):
     tflags = ["major_rank_conflict", "major_rank_conflict_inherited", "environmental",
     "unclassified_inherited", "unclassified", "viral", "barren", "not_otu", "incertae_sedis",
     "incertae_sedis_inherited", "extinct_inherited", "extinct", "hidden", "unplaced", "unplaced_inherited",
-    "was_container", "inconsistent", "inconsistent", "hybrid"]
+    "was_container", "inconsistent", "inconsistent", "hybrid", "merged", "inconsistent"]
     intax = otloc + "taxonomy.tsv"
     print "\nSubsetting taxonomy to target taxon:", target
     infile = open(intax, "r")

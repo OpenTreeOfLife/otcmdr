@@ -1,6 +1,6 @@
 import sys
 from subprocess import Popen
-
+sys.path.insert(0, 'Study_lists')
 import general_utils
 
 ################ config #####################
@@ -31,7 +31,7 @@ studytreelist.extend(microbelist)
 # the following will all be created (or overwritten)
 subsettax = basedir + "subset_taxonomy-ott" + synthottid + ".tsv"
 subsettaxtree = basedir + "subset_taxonomy-ott" + synthottid + ".tre"
-studyloc = basedir + "Source_nexsons/" # only overwritten if download = true
+studyloc = basedir + "Source_nexsons/" # will not be overwritten if it exists
 trloc = basedir + "Processed_newicks/"
 ranklist = basedir + "tree-ranking.txt"
 subprobs = basedir + "subprobs"
