@@ -45,7 +45,7 @@ print "loading " + str(len(studytreelist)) + " studies:", studytreelist
 
 ## phase 1: get data, initialize db, format newicks for otcetera decomposition
 # get nexsons
-download = True # set to False if you already have a set of nexsons and do not want fresher copies
+download = False # set to False if you already have a set of nexsons and do not want fresher copies
 if download:
     general_utils.get_all_studies_opentreeapi(studytreelist, studyloc)
 else:

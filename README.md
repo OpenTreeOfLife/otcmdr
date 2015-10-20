@@ -48,19 +48,29 @@ the graph. Some popular ones: 805080 = life; 691846 = Metazoa; 81461 = Aves; 244
 93302 = cellular organisms; 996421 = Archaea; 225495 = cyanobacteria.
 
 ### How to run
-The file `synth_procedure.py` begins with some configuration settings, specifically:
+The easiest way to perform the analyses is to mirror the Asterales example. The file `conf.py` contains 
+some configuration settings that are the same for any analysis, specifically:
 
-1. The location of your 'base directory' where you will conduct things.
-2. The location of treemachine.
-3. The location of otcetera (specifically the `supertree` directory).
-4. The location of ott.
-5. The ottid of the root node of the clade of interest.
+1. The location of treemachine.
+2. The location of otcetera (specifically the `supertree` directory).
+3. The location of ott.
+
+Edit `conf.py` to reflect your own machine.
+
+The file `run_asterales_synthesis.py` contains analysis-specific settings:
+
+1. The location of your 'base directory' where you will store results. This directory must already exist.
+2. The ottid of the root node of the clade of interest.
+3. The python ranked tree list(s) of which sources to use.
+4. Some other file names that you do not need to alter.
 
 Set these, er, settings, and run. Since things can take a while, it might be best to run 
 this under screen:
 
     screen
-    python synth_procedure.py
+    python run_asterales_synthesis.py
+
+But the Asterales analysis is quick enough that screen is not necessary.
 
 And that is it. 
 
