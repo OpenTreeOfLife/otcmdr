@@ -25,6 +25,7 @@ def get_all_studies_opentreeapi(studytreelist, studyloc):
         get_study_opentreeapi(studyid, studyloc)
 
 
+## phase 1
 def prepare_for_decomposition(javapre, treemloc, basedir, dbname, otloc, synthottid, subsettax, subsettaxtree,
     studytreelist, studyloc, trloc):
     subset_taxonomy(synthottid, otloc, subsettax)
@@ -33,6 +34,7 @@ def prepare_for_decomposition(javapre, treemloc, basedir, dbname, otloc, synthot
     process_nexsons(studytreelist, studyloc, javapre, treemloc, dbname, trloc)
 
 
+## phase 2
 def perform_decomposition(basedir, studytreelist, trloc, otceteraloc, subsettaxtree, subprobs):
     ranklist = basedir + "tree-ranking.txt"
     generate_tree_ranking(studytreelist, trloc, ranklist)
@@ -40,6 +42,7 @@ def perform_decomposition(basedir, studytreelist, trloc, otceteraloc, subsettaxt
     run_decomposition(basedir, otceteraloc, subprobs)
 
 
+## phase 13
 def run_synthesis(javapre, treemloc, basedir, dbname, synthottid, subprobs, synthtree):
     processedsubprobs = basedir + "Processed_subprobs"
     format_subprobs(treemloc, javapre, subprobs, processedsubprobs)
