@@ -64,13 +64,15 @@ The file `run_asterales_synthesis.py` contains analysis-specific settings:
 3. The python ranked tree list(s) of which sources to use.
 4. Some other file names that you do not need to alter.
 
-Set these, er, settings, and run. Since things can take a while, it might be best to run 
+Set these, er, settings, and run:
+
+    python run_asterales_synthesis.py
+
+The Asterales analysis is quite fast. For more extensive analyses, it might be best to run 
 this under screen:
 
     screen
-    python run_asterales_synthesis.py
-
-But the Asterales analysis is quick enough that screen is not necessary.
+    python run_full_synthesis.py
 
 And that is it. 
 
