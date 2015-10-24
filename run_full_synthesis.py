@@ -18,9 +18,9 @@ basedir = "/home/josephwb/Desktop/python_synth/Life/"
 # what is the ott id of the root node of the clade of interest?
 synthottid = "93302" # cellular organisms
 # name of DB
-dbname = basedir + "Life_ottv2.9draft12_21Oct2015_BTTF-day.db"
+dbname = basedir + "Life_ottv2.9draft12_24Oct2015.db"
 # name of synth tree newick file
-synthtree = basedir + "Life_ottv2.9draft12_synth_21Oct2015_BTTF-day.tre"
+synthtree = basedir + "Life_ottv2.9draft12_synth_24Oct2015.tre"
 # where are ranked study lists located? assume here to use dir Study_lists in this repo
 listdir = "Study_lists"
 sys.path.insert(0, listdir)
